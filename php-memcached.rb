@@ -13,7 +13,7 @@ class PhpMemcached < Formula
 
   def install
     system "phpize"
-    system "./configure", "--enable-memcached-igbinary", "--enable-memcached-json", "--enable-memcached", 
+    system "./configure", "--enable-memcached-json", "--enable-memcached", 
                           "--prefix=#{prefix}"
     system "make install"
     system "echo add 'extension=memcached.so' to your php.ini"
